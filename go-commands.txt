@@ -1,3 +1,5 @@
 go mod init <dir-path>
 go mod tidy
 go fmt <dir-path>
+go list -m -versions rsc.io/sampler
+go fmt ./...
