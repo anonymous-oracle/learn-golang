@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	var str string = `Raw string`
 	fmt.Printf("%s\n", str)
 }

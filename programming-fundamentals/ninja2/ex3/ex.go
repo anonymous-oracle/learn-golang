@@ -5,11 +5,11 @@ import (
 )
 
 const (
-	a = 42
+	a     = 42
 	b int = 42
 )
 
-func main()  {
+func main() {
 
 	fmt.Println(a, b)
 }

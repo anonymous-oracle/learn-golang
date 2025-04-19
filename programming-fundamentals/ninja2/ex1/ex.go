@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	x := 1753
-	fmt.Printf("%d\t%b\t%#x\n", x,x,x)
-	
+	fmt.Printf("%d\t%b\t%#x\n", x, x, x)
+
 }
