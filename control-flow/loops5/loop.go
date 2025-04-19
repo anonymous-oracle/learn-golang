@@ -7,6 +7,7 @@ import (
 func main() {
 	x := 0
 	for {
+		x++
 		if x > 100 {
 			break
 		}
@@ -14,7 +15,6 @@ func main() {
 			continue
 		}
 		fmt.Println(x)
-		x++
 	}
 	fmt.Println("done.")
 }
