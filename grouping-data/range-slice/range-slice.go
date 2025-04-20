@@ -16,7 +16,7 @@ func main() {
 		fmt.Println(i, v)
 	}
 
-	xi := []int {4,5,7,8,9,42}
+	xi := []int{4, 5, 7, 8, 9, 42}
 	for i, v := range xi {
 		fmt.Println(i, v)
 	}

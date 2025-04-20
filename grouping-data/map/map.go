@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-func main()  {
-	m := map[string] int{ // the key type is enclosed within [] and the value is outside
-		"James": 32,
+func main() {
+	m := map[string]int{ // the key type is enclosed within [] and the value is outside
+		"James":           32,
 		"Miss Moneypenny": 27,
-	} 
-	
+	}
+
 	fmt.Println(m)
 	fmt.Println(m["James"])
 	fmt.Println(m["Barnabas"])
@@ -30,8 +30,6 @@ func main()  {
 	for k, v := range m {
 		fmt.Printf("%v -> %v\n", k, v)
 	}
-
-	
 
 	// deleting a key from the map is easy
 	delete(m, "todd")
