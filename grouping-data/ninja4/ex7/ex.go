@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	r1 := []string{"James", "Bond", "Shaken, not stirred"}
 	r2 := []string{"Miss", "Moneypenny", "Hello James"}
 
