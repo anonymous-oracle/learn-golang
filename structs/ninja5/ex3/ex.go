@@ -10,25 +10,25 @@ type vehicle struct {
 }
 
 type truck struct {
-	vehicle vehicle
+	vehicle   vehicle
 	fourWheel bool
 }
 
 type sedan struct {
 	vehicle vehicle
-	luxury bool
+	luxury  bool
 }
 
-func main()  {
-	var truck = truck {
+func main() {
+	var truck = truck{
 		vehicle: vehicle{
 			doors: 2,
 			color: "red",
 		},
 		fourWheel: true,
 	}
-	
-	var sedan = sedan {
+
+	var sedan = sedan{
 		vehicle: vehicle{
 			doors: 4,
 			color: "white",

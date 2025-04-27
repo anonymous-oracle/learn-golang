@@ -4,13 +4,11 @@ import (
 	"fmt"
 )
 
-
-
 type truck struct {
 	vehicle struct {
 		doors int
 		color string
-		}
+	}
 	fourWheel bool
 }
 
@@ -18,21 +16,27 @@ type sedan struct {
 	vehicle struct {
 		doors int
 		color string
-		}
+	}
 	luxury bool
 }
 
-func main()  {
-	var truck = truck {
-		vehicle: struct{doors int; color string}{
+func main() {
+	var truck = truck{
+		vehicle: struct {
+			doors int
+			color string
+		}{
 			doors: 2,
 			color: "red",
 		},
 		fourWheel: true,
 	}
-	
-	var sedan = sedan {
-		vehicle:  struct{doors int; color string}{
+
+	var sedan = sedan{
+		vehicle: struct {
+			doors int
+			color string
+		}{
 			doors: 4,
 			color: "white",
 		},
