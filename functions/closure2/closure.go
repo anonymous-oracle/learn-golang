@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	a := incrementor()
 	b := incrementor()
 	fmt.Println(a())
