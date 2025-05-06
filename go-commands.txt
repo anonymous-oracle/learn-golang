@@ -3,3 +3,4 @@ go mod tidy
 go fmt <dir-path>
 go list -m -versions rsc.io/sampler
 go fmt ./...
+go run -race race-condition/rc.go

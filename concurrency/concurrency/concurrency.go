@@ -8,7 +8,7 @@ import (
 
 var wg sync.WaitGroup
 
-func main()  {
+func main() {
 	fmt.Println("OS\t", runtime.GOOS)
 	fmt.Println("ARCH\t", runtime.GOARCH)
 	fmt.Println("CPUs\t", runtime.NumCPU())
@@ -23,8 +23,7 @@ func main()  {
 	wg.Wait() // wait on the added go routines to finish because once the main() exits the execution stops
 }
 
-
-func foo()  {
+func foo() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("foo:", i)
 	}
@@ -32,7 +31,7 @@ func foo()  {
 	wg.Done() // signalling the wait group to notify that the routine has successfully ended
 }
 
-func bar()  {
+func bar() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("bar:", i)
 	}
