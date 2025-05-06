@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-	"time"
-
-	"golang.org/x/telemetry/counter"
+	"sync/atomic"
 )
 
 func main() {
@@ -21,8 +19,9 @@ func main() {
 	for i := 0; i < gs; i++ {
 		go func() {
 
-			counter++
-			runtime.Gosched() // yield the thread so that the execution of another go routine can start/continue
+			atomic.AddInt64(&counter, 1)                         // atomic operation to increment the counter
+			fmt.Println("Counter\t", atomic.LoadInt64(&counter)) // atomic operation to load the counter value
+			runtime.Gosched()                                    // yield the thread so that the execution of another go routine can start/continue
 
 			wg.Done() // calling done for each function literal execution present in the wait group routine
 

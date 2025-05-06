@@ -31,9 +31,10 @@ func main() {
 			fmt.Println("Goroutines:", runtime.NumGoroutine())
 		}()
 	}
+
+	wg.Wait() // waits for all routines to end before exiting the main function
 	fmt.Println("Goroutines:", runtime.NumGoroutine())
 
 	fmt.Println("count:", counter)
 
-	wg.Wait() // waits for all routines to end before exiting the main function
 }
