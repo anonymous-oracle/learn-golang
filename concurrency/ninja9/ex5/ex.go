@@ -10,7 +10,7 @@ import (
 func main() {
 	var wg sync.WaitGroup
 	var counter int64
-	
+
 	wg.Add(100)
 	for i := 0; i < 100; i++ {
 		go func() {

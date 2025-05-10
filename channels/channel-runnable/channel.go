@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	c := make(chan int)
 	go func() {
 		c <- 42 // this channel will not block because it is buffered and executes in a separate goroutine
