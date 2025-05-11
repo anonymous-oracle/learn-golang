@@ -47,13 +47,13 @@ func receive(e, o <-chan int, f chan<- int) {
 			f <- v
 		}
 		wg.Done()
-		}()
+	}()
 
-	go func ()  {
+	go func() {
 		for v := range o {
 			f <- v
 		}
-		wg.Done()	
+		wg.Done()
 	}()
 
 	wg.Wait()

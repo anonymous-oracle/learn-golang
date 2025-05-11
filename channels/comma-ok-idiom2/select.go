@@ -6,7 +6,7 @@ import (
 
 func main() {
 	c := make(chan int)
-	go func ()  {
+	go func() {
 		c <- 42
 		close(c)
 	}()
@@ -18,5 +18,3 @@ func main() {
 	fmt.Println(v, ok) // no values present and channel is closed
 
 }
-
-

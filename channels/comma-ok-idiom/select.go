@@ -41,7 +41,7 @@ func receive(e, o <-chan int, q <-chan bool) {
 			fmt.Println("from the odd channel:", v)
 
 		case i, ok := <-q:
-			if !ok { // if the channel is closed returns false 
+			if !ok { // if the channel is closed returns false
 				fmt.Println("from comma ok bit", i, ok)
 				return
 			} else {

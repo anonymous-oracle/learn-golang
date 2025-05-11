@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	c1 := make(chan int)
 	c2 := make(chan int)
 
@@ -19,23 +19,21 @@ func main()  {
 		fmt.Println(v)
 	}
 	fmt.Println("about to exit...")
-	
+
 }
 
-
-
-func populate(c chan int)  {
-	for i:=0; i< 100; i++ {
+func populate(c chan int) {
+	for i := 0; i < 100; i++ {
 		c <- i
 	}
 	close(c)
 }
 
-func fanOutIn(c1, c2 chan int){
+func fanOutIn(c1, c2 chan int) {
 	var wg sync.WaitGroup
 	for v := range c1 {
 		wg.Add(1)
-		go func(v2 int){
+		go func(v2 int) {
 			c2 <- timeConsumingWork(v2)
 			wg.Done()
 		}(v)
@@ -46,5 +44,5 @@ func fanOutIn(c1, c2 chan int){
 
 func timeConsumingWork(n int) int {
 	time.Sleep(time.Microsecond * time.Duration(rand.IntN(500)))
-	return n + rand.IntN(1000) 
+	return n + rand.IntN(1000)
 }
