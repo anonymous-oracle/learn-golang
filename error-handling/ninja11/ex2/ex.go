@@ -22,6 +22,7 @@ func main() {
 	bs, err := toJSON(p1)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	fmt.Println(string(bs))
 
@@ -31,7 +32,8 @@ func main() {
 func toJSON(a interface{}) ([]byte, error) {
 	bs, err := json.Marshal(a)
 	if err != nil {
-		return []byte{}, fmt.Errorf("Looks like there was an error")
+		// return []byte{}, fmt.Errorf("Looks like there was an error")
+		return []byte{}, errors.New("looks like there was an error")
 	}
 	return bs, nil
 }
