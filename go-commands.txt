@@ -4,3 +4,8 @@ go fmt <dir-path>
 go list -m -versions rsc.io/sampler
 go fmt ./...
 go run -race race-condition/rc.go
+go doc -cmd cmd/doc
+go doc
+go doc Sum
+go doc mymath.Sum
+go doc mymath
