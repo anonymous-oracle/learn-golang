@@ -9,3 +9,4 @@ go doc
 go doc Sum
 go doc mymath.Sum
 go doc mymath
+go test
