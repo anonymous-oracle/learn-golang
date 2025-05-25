@@ -10,3 +10,9 @@ go doc Sum
 go doc mymath.Sum
 go doc mymath
 go test
+go vet
+go test -bench .
+go test -bench Greet
+go test -cover .
+go test -coverprofile cover.out
+go tool cover -html=cover.out
